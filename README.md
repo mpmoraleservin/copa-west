@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+````markdown
+# 🎭 Copa West de Improvisación - Landing Page
 
-## Getting Started
+¡Bienvenido al repositorio de la landing page oficial de la Copa West de Improvisación 2025! Este proyecto está diseñado para promocionar el emocionante torneo de improvisación teatral que se celebra en Mendoza, Argentina.
 
-First, run the development server:
+## 🚀 Cómo Ponerlo en Marcha
+
+Sigue estos pasos para tener el proyecto corriendo en tu máquina local.
+
+### Prerrequisitos
+
+Asegúrate de tener instalado lo siguiente:
+
+- **Node.js** (versión 18.x o superior recomendada)
+- **npm** (viene con Node.js)
+
+### Instalación
+
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/tu-usuario/copa-west.git](https://github.com/tu-usuario/copa-west.git) # Reemplaza 'tu-usuario' con el tuyo
+    cd copa-west
+    ```
+2.  **Instala las dependencias:**
+    ```bash
+    npm install
+    ```
+
+### Estructura del Proyecto
+
+El proyecto sigue una estructura típica de Next.js con el directorio `src/`:
+````
+
+copa-west/
+├── public/  
+│ └── assets/ \# Imágenes del proyecto
+├── src/
+│ ├── app/ \# Rutas y layouts de la aplicación
+│ │ ├── layout.tsx \# Layout principal (HTML, carga de fuentes y CSS global)
+│ │ └── page.tsx \# Página principal (carga los componentes de la landing)
+│ ├── components/ \# Componentes reutilizables de la UI
+│ │ ├── About.tsx
+│ │ ├── Contact.tsx
+│ │ ├── Dates.tsx
+│ │ ├── Gallery.tsx
+│ │ ├── Hero.tsx
+│ │ ├── Location.tsx
+│ │ └── Social.tsx
+│ └── styles/ \# Archivos CSS globales
+│ └── globals.css \# Hoja de estilos principal de Tailwind CSS
+├── next.config.js \# Configuración de Next.js
+├── postcss.config.js \# Configuración de PostCSS (para Tailwind)
+├── tailwind.config.ts \# Configuración de Tailwind CSS (colores, fuentes, etc.)
+├── tsconfig.json \# Configuración de TypeScript
+└── package.json \# Dependencias y scripts del proyecto
+
+````
+
+### Ejecución en Modo Desarrollo
+
+Para iniciar el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+````
+
+Una vez que el servidor esté listo, abre tu navegador y visita:
+
+[http://localhost:3000](https://www.google.com/search?q=http://localhost:3000)
+
+La aplicación se recargará automáticamente cada vez que realices cambios en el código fuente.
+
+### Build para Producción
+
+Para construir la aplicación para despliegue en producción:
+
+```bash
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Esto generará una versión optimizada de tu aplicación en la carpeta `.next/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Iniciar en Modo Producción
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para iniciar la aplicación compilada en modo producción (después de `npm run build`):
 
-## Learn More
+```bash
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Linting
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para ejecutar el linter y encontrar problemas de estilo o errores de código:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run lint
+```
 
-## Deploy on Vercel
+## 🎨 Personalización y Estilos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Los estilos se gestionan con [Tailwind CSS](https://tailwindcss.com/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Colores y Fuentes:** Puedes personalizar los colores y las familias de fuentes en `tailwind.config.ts`.
+- **Estilos Globales:** Las directivas de Tailwind y estilos base se encuentran en `src/styles/globals.css`.
+- **Clases de Utilidad:** Aplica clases de utilidad de Tailwind directamente en tus componentes JSX para estilizar.
+
+```
+
+```

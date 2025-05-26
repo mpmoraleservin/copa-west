@@ -1,0 +1,92 @@
+
+@font-face {
+  font-family: 'Outright'; 
+  src: url('/assets/fonts/outright-regular.ttf'); 
+  font-weight: normal; 
+  font-style: normal;
+  font-display: swap; 
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... (tus otras fuentes y estilos base) ... */
+
+@layer utilities {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes subtleZoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.03); /* Ajusta el nivel de zoom como prefieras */
+    }
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.7s ease-out forwards;
+  }
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  .animate-subtleZoom {
+    animation: subtleZoom 20s infinite alternate ease-in-out; /* Larga duración para sutileza */
+  }
+
+  /* Clases de delay para animaciones escalonadas */
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
+}
+
+/* ... (resto de tus estilos, como el keyframe modal-in) ... */
+body {
+  @apply bg-softPink text-deepNavy font-body; /* Asegúrate que esto no entre en conflicto con bg-deepNavy del Hero */
+  /* Si Hero es el primer elemento, el bg-softPink no se verá inicialmente. Está bien. */
+}
+
+/* En tu globals.css, dentro de @layer utilities o similar */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* fadeInUp ya debería estar definido de la sección Hero */
+
+.animate-fadeInLeft { animation: fadeInLeft 0.7s ease-out forwards; }
+.animate-fadeInRight { animation: fadeInRight 0.7s ease-out forwards; }
+/* .animate-fadeInUp ya debería estar definido */
+/* .animation-delay-XXX ya deberían estar definidos */
+
+/* En tu globals.css, dentro de @layer utilities o similar */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); } /* Empezar un poco más grande que 0.8 */
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-scaleIn { animation: scaleIn 0.4s ease-out forwards; }
+/* fadeInUp y animation-delay-XXX ya deberían estar definidos */
