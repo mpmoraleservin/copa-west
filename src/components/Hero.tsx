@@ -19,7 +19,7 @@ export default function Hero({ className }: HeroProps) {
       `}
     >
       <Image
-        src="/assets/copa_west_hero_bg.png" 
+        src="/assets/hero.png" 
         alt="Fondo Copa West de Improvisación"
         fill
         style={{ objectFit: 'cover' }}
@@ -27,9 +27,9 @@ export default function Hero({ className }: HeroProps) {
         priority 
         className="
           absolute inset-0 w-full h-full
-          opacity-20 /* Un poco más de opacidad si la imagen lo permite */
-          animate-subtleZoom /* Aplicamos la animación de zoom sutil */
-          object-center /* Centra la imagen */
+          opacity-60 
+          animate-subtleZoom 
+          object-center
         "
       />
       <div className="absolute inset-0 bg-gradient-to-b from-deepNavy/70 via-deepNavy/40 to-deepNavy/90"></div>
@@ -50,12 +50,12 @@ export default function Hero({ className }: HeroProps) {
             text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl
             font-heading uppercase tracking-widest leading-tight
             text-classicOrange
-            drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)] /* Sombra más definida */
+            drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)] 
             mb-4 md:mb-6 lg:mb-8
-            opacity-0 animate-fadeInUp /* Animación */
+            opacity-0 animate-fadeInUp
           "
         >
-          LLEGA LA COPA <br className="block sm:hidden" /> WEST <br className="md:hidden" /> DE IMPRO
+          LLEGA LA COPA WEST DE IMPRO
         </h1>
 
         <h2
