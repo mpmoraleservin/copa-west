@@ -72,7 +72,7 @@ Sigue estos pasos para levantar el proyecto en tu entorno local:
 
 ---
 
-## 📁 Estructura del Proyecto (Simplificada)
+## 📁 Estructura del Proyecto
 
 ```
 copa-west/
@@ -93,6 +93,8 @@ copa-west/
 ├── tailwind.config.ts     # Configuración de Tailwind CSS
 ├── tsconfig.json          # Configuración de TypeScript
 └── README.md              # ¡Este archivo!
+
+
 ```
 
 ---
