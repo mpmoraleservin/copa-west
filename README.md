@@ -84,12 +84,9 @@ Sigue estos pasos para levantar el proyecto en tu entorno local:
 
 El proyecto sigue una estructura típica de Next.js con el directorio `src/`:
 
-```
-
 ## 📁 Estructura del Proyecto
 
 ```
-
 copa-west/
 ├── public/
 │ └── assets/
@@ -104,7 +101,6 @@ copa-west/
 ├── tailwind.config.ts
 ├── tsconfig.json
 └── package.json
-
 ````
 
 ### Ejecución en Modo Desarrollo
@@ -155,8 +151,6 @@ Los estilos se gestionan con [Tailwind CSS](https://tailwindcss.com/).
 - **Estilos Globales:** Las directivas de Tailwind y estilos base se encuentran en `src/styles/globals.css`.
 - **Clases de Utilidad:** Aplica clases de utilidad de Tailwind directamente en tus componentes JSX para estilizar.
 
-```
-
 ---
 
 ## 🌐 Despliegue
@@ -175,5 +169,3 @@ Este proyecto está configurado para un despliegue óptimo en **[Vercel](https:/
 * **Fuentes:**
     * `font-heading`: "Outright" (para títulos)
     * `font-body`: Fuente sans-serif estándar (para el cuerpo del texto)
-
-```
