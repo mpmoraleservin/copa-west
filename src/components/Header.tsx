@@ -11,14 +11,14 @@ export default function Header() {
   const navLinks = [
     { name: 'Acerca de', href: '#about' },
     { name: 'Equipos', href: '#teams' },
-    { name: 'Jugadores', href: '#featured-characters' }, // Actualizado para coincidir con el ID de la sección
+    { name: 'Jugadores', href: '#featured-characters' }, 
     { name: 'Galería', href: '#gallery' },
     { name: 'Instagram', href: 'https://instagram.com/copawest', external: true },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // Cambia a true si se ha scrolleado más de 50px
+      setScrolled(window.scrollY > 50); 
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -42,7 +42,7 @@ export default function Header() {
             alt="Copa West Logo"
             width={40} 
             height={40} 
-            className="mr-2 md:w-10 md:h-10 group-hover:scale-110 transition-transform duration-200" // Efecto en logo
+            className="mr-2 md:w-10 md:h-10 group-hover:scale-110 transition-transform duration-200"
           />
           <span className="font-heading text-lg md:text-xl uppercase tracking-wider text-classicOrange group-hover:text-softOrange transition-colors duration-200">
             Copa West
@@ -94,8 +94,8 @@ export default function Header() {
 
         <Link
           href="https://www.entradaweb.com.ar/evento/a7369f7f/step/1"
-          target="_blank" // Siempre buena idea para enlaces externos
-          rel="noopener noreferrer" // Por seguridad y SEO
+          target="_blank" 
+          rel="noopener noreferrer" 
           className="
             hidden md:block
             bg-classicOrange hover:bg-softOrange text-deepNavy
@@ -107,8 +107,6 @@ export default function Header() {
           Comprar Entrada
         </Link>
       </nav>
-
-      {/* Menú desplegable para móvil */}
       {isOpen && (
         <div className="
           md:hidden

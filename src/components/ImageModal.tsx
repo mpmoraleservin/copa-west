@@ -11,7 +11,6 @@ interface ImageModalProps {
 export default function ImageModal({ src, alt, onClose }: ImageModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
 
-  // Cierra el modal si se hace clic fuera del contenido de la imagen
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
@@ -25,7 +24,6 @@ export default function ImageModal({ src, alt, onClose }: ImageModalProps) {
     };
   }, [onClose]);
 
-  // Maneja la tecla Escape para cerrar el modal
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {

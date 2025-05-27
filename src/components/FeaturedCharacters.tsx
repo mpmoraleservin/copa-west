@@ -1,10 +1,8 @@
-// components/FeaturedCharacters.tsx
-"use client"; // Necesario si usas hooks o event handlers, y para consistencia si otras secciones lo usan.
+"use client"; 
 
 import Image from 'next/image';
-import React from 'react'; // Import explícito de React
+import React from 'react';
 
-// Datos de los personajes destacados
 const characters = [
   { name: 'Abi', image: '/assets/characters/Abi.png', link: '#' },
   { name: 'Ailu', image: '/assets/characters/Ailu.png', link: '#' },
@@ -15,10 +13,9 @@ const characters = [
 export default function FeaturedCharacters() {
     return (
       <section
-        id="featured-characters" // ID para la navegación
+        id="featured-characters" 
         className="bg-softPink text-deepNavy py-20 md:py-28 lg:py-32 relative overflow-hidden w-full"
       >
-        {/* Título de la sección */}
         <div className="max-w-7xl mx-auto px-4 mb-12 md:mb-16 text-center">
           <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-wider text-classicOrange leading-tight opacity-0 animate-fadeInUp">
             Jugadores Destacados
@@ -27,8 +24,6 @@ export default function FeaturedCharacters() {
             Conoce a las figuras clave de la Copa West. ¡Prepárate para la acción!
           </p>
         </div>
-  
-        {/* Contenedor de las imágenes de los personajes */}
         <div className="
           relative z-10
           flex flex-nowrap justify-start items-stretch /* flex-nowrap para una sola línea, justify-start para que el scroll comience desde la izquierda */
@@ -39,13 +34,7 @@ export default function FeaturedCharacters() {
           pb-4 /* Padding inferior para la barra de scroll si aparece */
           scrollbar-thin scrollbar-thumb-classicOrange/70 scrollbar-track-bluePurple/20 /* Estilo de scrollbar opcional */
         ">
-          {/* Contenedor interno para centrar un máximo de 4 tarjetas si no hay scroll,
-              o para permitir que el scroll funcione correctamente si hay más.
-              Este div no es estrictamente necesario si el div padre ya tiene px y max-w-full,
-              pero puede ayudar a controlar el ancho visible inicial si se combina con un max-w en él.
-              Por ahora, lo mantenemos simple y dejamos que el scroll maneje el desbordamiento.
-          */}
-          <div className="flex flex-nowrap mx-auto"> {/* mx-auto puede ayudar a centrar si hay menos de 4 y no scrollea */}
+          <div className="flex flex-nowrap mx-auto"> 
             {characters.map((character, index) => (
               <div
                 key={character.name}
@@ -69,7 +58,7 @@ export default function FeaturedCharacters() {
                   fill
                   style={{ objectFit: 'cover', objectPosition: 'top center' }}
                   quality={85}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" // Ajusta sizes para imágenes más grandes
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" 
                   className="absolute inset-0 w-full h-full transition-transform duration-500 ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-2/5 md:h-1/3 bg-gradient-to-t from-deepNavy/85 via-deepNavy/60 to-transparent transition-opacity duration-300 group-hover:from-deepNavy/95"></div>

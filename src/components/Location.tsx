@@ -1,4 +1,4 @@
-import Map from './Map'; 
+import Map from '../components/Map'; 
 
 export default function Location() {
   return (
@@ -18,7 +18,6 @@ export default function Location() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* Columna del Mapa - SIN BORDE NARANJA */}
           <div className="w-full aspect-[4/3] sm:aspect-video lg:aspect-square rounded-xl overflow-hidden shadow-2xl opacity-0 animate-fadeInLeft animation-delay-200">
             <Map />
           </div>
@@ -33,7 +32,7 @@ export default function Location() {
               <br />
               Mendoza, Argentina.
             </p>
-            {/* Pastilla de información de la hora */}
+            {/* Pastilla de información */}
             <div className="pt-2">
               <div className="bg-classicOrange text-deepNavy py-3 px-5 rounded-lg inline-block shadow-lg font-body text-lg md:text-xl font-semibold">
                 <span className="text-2xl align-middle mr-2"></span>

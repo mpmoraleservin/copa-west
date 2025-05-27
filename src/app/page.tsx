@@ -5,7 +5,7 @@ import Teams from '@/components/Teams';
 import Gallery from '@/components/Gallery';
 import Location from '@/components/Location';
 import Footer from '@/components/Footer';
-import FeaturedCharacters from '@/components/FeaturedCharacters'; // <-- Importa el nuevo componente
+import FeaturedCharacters from '@/components/FeaturedCharacters'; 
 
 export default function Home() {
   return (

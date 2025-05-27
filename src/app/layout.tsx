@@ -1,9 +1,7 @@
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
-import { Oswald, Outfit } from 'next/font/google'; // Importa las fuentes
+import { Oswald, Outfit } from 'next/font/google'; 
 
-// Configura las fuentes. Asegúrate de que los subsets y weights sean correctos,
-// y que 'variable' esté configurado con el nombre de tu variable CSS.
 const oswald = Oswald({ subsets: ['latin'], weight: ['500'], variable: '--font-heading' });
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-body' });
 
@@ -14,7 +12,6 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // Las clases de variable CSS se aplican aquí
     <html lang="es" className={`${oswald.variable} ${outfit.variable}`}>
       <body>{children}</body>
     </html>

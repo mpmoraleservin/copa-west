@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import ImageModal from './ImageModal'; // Asegúrate de que este archivo exista y esté estilizado
-
+import ImageModal from './ImageModal'; 
 const images = [
   '/assets/gallery/gallery_1.jpeg', 
   '/assets/gallery/gallery_2.jpeg',
@@ -11,7 +10,6 @@ const images = [
   '/assets/gallery/gallery_4.jpeg',
   '/assets/gallery/gallery_5.jpeg',
   '/assets/gallery/gallery_6.jpeg',
-  // Añade más imágenes si es necesario
 ];
 
 export default function Gallery() {
@@ -22,7 +20,7 @@ export default function Gallery() {
 
   return (
     <section
-      id="gallery" // ID para la navegación
+      id="gallery"
       className="
         bg-deepNavy text-white
         py-20 md:py-28 lg:py-32
@@ -45,11 +43,9 @@ export default function Gallery() {
           mt-4 max-w-2xl mx-auto
           opacity-0 animate-fadeInUp animation-delay-200
         ">
-          Revive los mejores momentos de la Copa West.
+          Reviví los mejores momentos de la Copa West.
         </p>
       </div>
-
-      {/* Contenedor de la galería de imágenes */}
       <div className="
         grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
         gap-6 md:gap-8 lg:gap-10 /* Espaciado entre imágenes */
@@ -65,7 +61,7 @@ export default function Gallery() {
               group cursor-pointer
               opacity-0 animate-scaleIn /* Animación de entrada para cada item */
             "
-            style={{ animationDelay: `${200 + index * 100}ms` }} // Delay escalonado
+            style={{ animationDelay: `${200 + index * 100}ms` }} 
             onClick={() => openModal(src)}
           >
             <Image
@@ -73,13 +69,12 @@ export default function Gallery() {
               alt={`Imagen de galería ${index + 1}`}
               fill
               style={{ objectFit: 'cover' }}
-              quality={80} // Calidad para imágenes de galería
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" // Sizes para optimización
+              quality={80} 
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" 
               className="
                 transition-transform duration-500 ease-out group-hover:scale-110 /* Zoom en la imagen al hacer hover */
               "
             />
-            {/* Overlay mejorado al pasar el ratón */}
             <div className="
               absolute inset-0
               bg-gradient-to-t from-deepNavy/70 via-transparent to-transparent /* Degradado desde abajo */
@@ -87,7 +82,6 @@ export default function Gallery() {
               transition-all duration-300 ease-out
               flex flex-col items-center justify-end pb-6 /* Para el ícono y texto opcional */
             ">
-              {/* Icono de lupa con animación */}
               <div className="
                 transform scale-0 group-hover:scale-100 transition-transform duration-300 ease-out delay-100
               ">
@@ -95,13 +89,10 @@ export default function Gallery() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 10V3m0 7H3m7 0h7m0 0v7"></path> {/* Lupa con + */}
                 </svg>
               </div>
-              {/* Podrías añadir un pequeño texto aquí si quisieras, ej: "Ver más" */}
             </div>
           </div>
         ))}
       </div>
-
-      {/* Renderizar el modal si hay una imagen seleccionada */}
       {selectedImage && (
         <ImageModal
           src={selectedImage}

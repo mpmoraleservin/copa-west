@@ -2,12 +2,10 @@
 
 import Image from 'next/image';
 
-// Array de URLs de los logos de tus equipos
-// Asegúrate de que estas rutas sean correctas y existan en tu carpeta public/assets/logos-equipos/
 const teamLogos = [
   { name: 'The Gauchos', src: '/assets/logos-equipos/logo - equipo A.png' },
-  { name: 'Godoy Spurs', src: '/assets/logos-equipos/logo - equipo B - NO COMPITE.jpg' }, // Asegúrate de que el nombre del archivo sea exacto
-  { name: 'The Guanakills', src: '/assets/logos-equipos/logo - equipo C.PNG' }, // Asegúrate de que el nombre del archivo sea exacto (C.PNG vs C.png)
+  { name: 'Godoy Spurs', src: '/assets/logos-equipos/logo - equipo B - NO COMPITE.jpg' }, 
+  { name: 'The Guanakills', src: '/assets/logos-equipos/logo - equipo C.PNG' }, 
   { name: 'Lujángeles de Cuyo', src: '/assets/logos-equipos/logo - equipo D.jpeg' },
   { name: 'The Condors', src: '/assets/logos-equipos/logo - equipo E.png' },
   { name: 'Caciques de Ciudad', src: '/assets/logos-equipos/logo - equipo F.png' },
@@ -15,7 +13,6 @@ const teamLogos = [
   { name: 'Los zorros', src: '/assets/logos-equipos/logo - equipo H.jpg' },
   { name: 'Pandito Escénico', src: '/assets/logos-equipos/logo - equipo I.jpeg' },
   { name: 'Carrodilla Virgins', src: '/assets/logos-equipos/logo - equipo J.jpeg' },
-  // Añade más equipos si tienes más logos
 ];
 
 const extendedTeamLogos = [...teamLogos, ...teamLogos, ...teamLogos];
@@ -41,10 +38,10 @@ export default function Teams() {
         }
       `}</style>
       <section
-        id="teams" // ID para la navegación
+        id="teams" 
         className="bg-deepNavy text-white py-16 md:py-20 lg:py-24 relative w-full overflow-hidden"
       >
-        {/* Título de la sección */}
+        {/* Título */}
         <div className="max-w-7xl mx-auto mb-10 md:mb-12 px-4 text-center">
           <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl uppercase tracking-wider text-classicOrange leading-tight opacity-0 animate-fadeInUp">
             Equipos Participantes
@@ -55,9 +52,9 @@ export default function Teams() {
         </div>
 
         {/* Contenedor de los logos en línea con scroll infinito */}
-        <div className="marquee-container w-full overflow-hidden py-4 group"> {/* 'group' ya no es necesario aquí para la pausa, se usa 'marquee-container:hover' */}
+        <div className="marquee-container w-full overflow-hidden py-4 marquee-container:hover"> 
           <div
-            className="animate-marquee flex-shrink-0" // Aplicamos la animación y flex-shrink-0
+            className="animate-marquee flex-shrink-0" 
           >
             {extendedTeamLogos.map((team, index) => (
               <div
@@ -67,7 +64,7 @@ export default function Teams() {
                   opacity-0 animate-scaleIn
                   mx-2.5 md:mx-3 lg:mx-4 /* Espacio entre logos usando margen */
                 "
-                style={{ animationDelay: `${100 + index * 50}ms` }} // Delay escalonado más rápido para la aparición inicial
+                style={{ animationDelay: `${100 + index * 50}ms` }} 
                 title={team.name}
               >
                 <div className="

@@ -18,14 +18,13 @@ export default function Hero({ className }: HeroProps) {
         ${className || ''} /* Aplica el className (padding-top) de page.tsx */
       `}
     >
-      {/* Fondo con imagen y degradado */}
       <Image
-        src="/assets/copa_west_hero_bg.png" // Asegúrate que esta imagen sea de alta calidad
+        src="/assets/copa_west_hero_bg.png" 
         alt="Fondo Copa West de Improvisación"
         fill
         style={{ objectFit: 'cover' }}
-        quality={90} // Ajusta la calidad vs performance
-        priority // Carga esta imagen con prioridad ya que es LCP (Largest Contentful Paint)
+        quality={90} 
+        priority 
         className="
           absolute inset-0 w-full h-full
           opacity-20 /* Un poco más de opacidad si la imagen lo permite */
@@ -33,9 +32,7 @@ export default function Hero({ className }: HeroProps) {
           object-center /* Centra la imagen */
         "
       />
-      {/* El degradado se puede ajustar para mejorar contraste o efecto visual */}
       <div className="absolute inset-0 bg-gradient-to-b from-deepNavy/70 via-deepNavy/40 to-deepNavy/90"></div>
-      {/* Otro degradado radial opcional para centrar más la atención */}
       <div className="absolute inset-0 bg-radial-gradient(ellipse_at_center,transparent_30%,theme('colors.deepNavy')_100%) opacity-50"></div>
 
 
@@ -48,9 +45,6 @@ export default function Hero({ className }: HeroProps) {
           px-2
         "
       >
-        {/* Para que las animaciones de entrada no se apliquen hasta que el elemento sea visible,
-            se necesitaría Intersection Observer. Por simplicidad, las aplicaremos al cargar.
-            Asegúrate que estas clases 'opacity-0' se eliminen por la animación. */}
         <h1
           className="
             text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl
@@ -99,14 +93,11 @@ export default function Hero({ className }: HeroProps) {
           ¡CONSEGUÍ TU ENTRADA!
         </Link>
       </div>
-
-      {/* Indicador de Scroll Down Opcional */}
       <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 z-10 opacity-0 animate-fadeIn animation-delay-600">
         <a href="#about" aria-label="Ir a la sección Acerca de">
           <svg className="w-8 h-8 md:w-10 md:h-10 text-white/70 hover:text-white animate-bounce hover:animate-none transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 9l-7 7-7-7"></path>
           </svg>
-          {/* O podrías usar un icono importado como <FiArrowDownCircle size={40} className="text-white/70 ..." /> */}
         </a>
       </div>
     </section>
